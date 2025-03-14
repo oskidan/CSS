@@ -87,7 +87,7 @@ extension HEXColor: ConvertibleToJSValue {
 }
 
 extension HEXColor: ExpressibleByStringLiteral {
-    public init(stringLiteral value: StringLiteralType) {
+    public init(stringLiteral value: String) {
         do {
             self = try HEXColor(parsing: value)
         } catch {
