@@ -86,6 +86,16 @@ extension HEXColor: ConvertibleToJSValue {
     }
 }
 
+extension HEXColor: ExpressibleByStringLiteral {
+    public init(stringLiteral value: StringLiteralType) {
+        do {
+            self = try HEXColor(parsing: value)
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+}
+
 extension HEXColor {
     public struct ParsingError: Error {
         let localizedDescription: String

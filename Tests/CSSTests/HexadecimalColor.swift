@@ -16,48 +16,32 @@ final class HexadecimalColor: XCTestCase {
     //  Given: I have a hex color as a three-value syntax
     //  When: I parse it
     //  Then: I get an object
-    func test_parsing_a_three_value_syntax() throws {
-        let color = try HEXColor(parsing: "#DEF")
-        XCTAssertEqual(color.r, 0xD)
-        XCTAssertEqual(color.g, 0xE)
-        XCTAssertEqual(color.b, 0xF)
-        XCTAssertEqual(color.a, 0xFF)
+    func test_parsing_a_three_value_syntax() {
+        XCTAssertEqual(HEXColor(r: 0xD, g: 0xE, b: 0xF, a: 0xFF), "#DEF")
     }
 
     // Scenario: Parsing a four-value syntax.
     //  Given: I have a hex color as a four-value syntax
     //  When: I parse it
     //  Then: I get an object
-    func test_parsing_a_four_value_syntax() throws {
-        let color = try HEXColor(parsing: "#ABCD")
-        XCTAssertEqual(color.r, 0xA)
-        XCTAssertEqual(color.g, 0xB)
-        XCTAssertEqual(color.b, 0xC)
-        XCTAssertEqual(color.a, 0xD)
+    func test_parsing_a_four_value_syntax() {
+        XCTAssertEqual(HEXColor(r: 0xA, g: 0xB, b: 0xC, a: 0xD), "#ABCD")
     }
 
     // Scenario: Parsing a six-value syntax.
     //  Given: I have a hex color as a six-value syntax
     //  When: I parse it
     //  Then: I get an object
-    func test_parsing_a_six_value_syntax() throws {
-        let color = try HEXColor(parsing: "#1A2B3C")
-        XCTAssertEqual(color.r, 0x1A)
-        XCTAssertEqual(color.g, 0x2B)
-        XCTAssertEqual(color.b, 0x3C)
-        XCTAssertEqual(color.a, 0xFF)
+    func test_parsing_a_six_value_syntax() {
+        XCTAssertEqual(HEXColor(r: 0x1A, g: 0x2B, b: 0x3C, a: 0xFF), "#1A2B3C")
     }
 
     // Scenario: Parsing an eight-value syntax.
     //  Given: I have a hex color as an eight-value syntax
     //  When: I parse it
     //  Then: I get an object
-    func test_parsing_an_eight_value_syntax() throws {
-        let color = try HEXColor(parsing: "#1A2B3C4D")
-        XCTAssertEqual(color.r, 0x1A)
-        XCTAssertEqual(color.g, 0x2B)
-        XCTAssertEqual(color.b, 0x3C)
-        XCTAssertEqual(color.a, 0x4D)
+    func test_parsing_an_eight_value_syntax() {
+        XCTAssertEqual(HEXColor(r: 0x1A, g: 0x2B, b: 0x3C, a: 0x4D), "#1A2B3C4D")
     }
 
     // Scenario: Converting to a three-value syntax
