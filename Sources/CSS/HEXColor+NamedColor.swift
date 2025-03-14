@@ -147,5 +147,5 @@ extension HEXColor {
     public static let wheat: Self = "#f5deb3"
     public static let white: Self = "#ffffff"
     public static let whitesmoke: Self = "#f5f5f5"
-    public static let yellow: Self = "#ffff0"
+    public static let yellow: Self = "#ffff00"
 }

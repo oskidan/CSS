@@ -18,9 +18,10 @@ extension HEXColor {
 
         func nextValue() throws -> Int {
             guard let value = it.next()?.hexDigitValue else {
-                throw ParsingError("Cannot parse a hex color. Wrong syntax: must consist of hex digits.")
+                throw ParsingError(
+                    "Cannot parse a hex color. Wrong syntax: must consist of hex digits.")
             }
-            return  value & 0xF
+            return value & 0xF
         }
 
         switch description.count {
@@ -87,7 +88,7 @@ extension HEXColor: ConvertibleToJSValue {
 }
 
 extension HEXColor: ExpressibleByStringLiteral {
-    public init(stringLiteral value: String) {
+    public init(stringLiteral value: StringLiteralType) {
         do {
             self = try HEXColor(parsing: value)
         } catch {
