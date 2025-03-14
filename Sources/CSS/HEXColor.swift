@@ -1,6 +1,6 @@
 import JavaScriptKit
 
-public struct HEXColor {
+public struct HEXColor: Sendable {
     let r: Int
     let g: Int
     let b: Int
