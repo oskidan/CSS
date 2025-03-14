@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "name": "CSS Unit Tests",
+            "command": "./unitTests.sh && exit",
+            "cwd": "${workspaceFolder:CSS}",
+            "request": "launch"
+        }
+    ]
+}
